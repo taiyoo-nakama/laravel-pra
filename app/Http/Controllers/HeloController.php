@@ -17,8 +17,21 @@ class HeloController extends Controller
         $res = "you typed: " . $request -> input('str');
         return view('helo',['message' => $res]);
     }
-    public function postNew()
+
+    public function getNew(Request $request)
     {
-        return view('helo');
+        return view('new');
+    }
+    public function postNew(Request $request)
+    {
+        $name = $request->input('name');
+        $mail = $request->input('mail');
+        $age = $request->input('age');
+        Mytable::create([
+            'name' => $name,
+            'mail' =>$mail,
+            'age' => $age
+        ]);
+        return view('new');
     }
 }

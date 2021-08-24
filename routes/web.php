@@ -19,4 +19,5 @@ Route::get('/', function () {
 });
 Route::get('/helo', [HeloController::class,'getIndex']);
 Route::post('/helo', [HeloController::class,'postIndex']);
-Route::post('/helo/new', [HeloController::class,'new']);
+Route::get('/helo/new', [HeloController::class,'getNew']);
+Route::post('/helo/new', [HeloController::class,'postNew']);

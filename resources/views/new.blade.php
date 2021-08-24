@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>Sample</h1>
-    <p><?php echo $message; ?></p>
+    <p><?php //echo $message; ?></p>
     <table>
     <form method="post" action="/helo/new">
     @csrf
