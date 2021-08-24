@@ -10,4 +10,6 @@ class MyTable extends Model
 {
     use HasFactory;
     protected $table = 'MyTable';
+    protected $guarded = array('id');
+    public $timestamps = false;
 }
